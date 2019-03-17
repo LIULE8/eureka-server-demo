@@ -1,0 +1,14 @@
+server:
+  port: 8761
+
+eureka:
+#  实例 host
+  instance:
+    hostname: localhost
+  client:
+#    声明自己是个服务器
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+#      ${} 可以取当前文件的值
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
