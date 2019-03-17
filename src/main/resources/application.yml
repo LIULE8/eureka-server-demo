@@ -12,3 +12,7 @@ eureka:
     serviceUrl:
 #      ${} 可以取当前文件的值
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+#  关闭注册中心的自我保护模式，生产环境禁止使用这项配置
+  server:
+    enable-self-preservation: false
